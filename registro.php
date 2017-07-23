@@ -5,13 +5,14 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>Registro de temas</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
   </head>
   <body>
     <div class="jumbotron text-center">
       <h1>Registro de Temas</h1>
     </div>
     <div class="container">
-      <form class="form-horizontal" action="index.html" method="post">
+      <form class="form-horizontal" action="insert.php" method="post">
         <div class="form-group">
           <label class="control-label col-sm-2" for="fecha">Fecha:</label>
           <div class="col-sm-10">
@@ -27,7 +28,12 @@
         <div class="form-group">
           <label class="control-label col-sm-2" for="literatura">Literatura:</label>
           <div class="col-sm-10">
-            <input type="text" name="literatura" id="literatura" placeholder="Seleccione la Literatura" class="form-control" value="">
+            <select class="form-control" name="literatura">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
           </div>
         </div>
         <div class="form-group">

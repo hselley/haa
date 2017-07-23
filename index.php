@@ -10,6 +10,7 @@
         text-align: center;
       }
     </style>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
   </head>
   <body>
     <div class="jumbotron text-center">
