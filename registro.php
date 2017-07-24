@@ -25,10 +25,10 @@
     }
   ?>
   <body>
-    <div class="jumbotron text-center">
-      <h1>Registro de Temas</h1>
-    </div>
     <div class="container">
+      <div class="jumbotron text-center">
+        <h1>Registro de Temas</h1>
+      </div>
       <form class="form-horizontal" action="insert.php" method="post">
         <div class="form-group">
           <label class="control-label col-sm-2" for="fecha">Fecha:</label>

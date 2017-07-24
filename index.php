@@ -13,10 +13,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
   </head>
   <body>
-    <div class="jumbotron text-center">
-      <h1>Temas del Grupo HAA Aprendiendo a Amar.</h1>
-    </div>
     <div class="container">
+      <div class="jumbotron text-center">
+        <h1>Temas del Grupo HAA</h1>
+        <h2>Aprendiendo a Amar</h2>
+      </div>
       <div class="table-responsive">
         <table class="table table-striped table-bordered table-hover">
           <thead>
