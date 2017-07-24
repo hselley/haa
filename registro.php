@@ -7,6 +7,23 @@
     <title>Registro de temas</title>
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
   </head>
+    <?php
+    $con = mysqli_connect("localhost", "geeker", "selley", "haa");
+
+    // Verificar conexión
+    if (mysqli_connect_errno()) {
+      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    }
+
+    // Obtengo una lista de los nombres de los libros en la tabla "Literatura"
+    // El resultado se almacena en el arreglo $lit y el índice coíncide con el ID de la BD
+    $lit = array();
+    $i = 1;
+    $result = mysqli_query($con, "SELECT nombre FROM literatura");
+    while ($row = mysqli_fetch_array($result)) {
+      $lit[$i++] = $row['nombre'];
+    }
+  ?>
   <body>
     <div class="jumbotron text-center">
       <h1>Registro de Temas</h1>
@@ -29,10 +46,12 @@
           <label class="control-label col-sm-2" for="literatura">Literatura:</label>
           <div class="col-sm-10">
             <select class="form-control" name="literatura">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
+              <?php
+                for ($i=1; $i <= sizeof($lit) ; $i++) {
+                  $cad = "<option value=\"" . $i . "\">" . $lit[$i] . "</option>";
+                  echo $cad;
+                }
+              ?>
             </select>
           </div>
         </div>

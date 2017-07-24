@@ -42,10 +42,7 @@
               $i = 1;
               $result = mysqli_query($con, "SELECT nombre FROM literatura");
               while ($row = mysqli_fetch_array($result)) {
-                $lit[$i] = $row['nombre'];
-                // echo $lit[$i];
-                // echo "<br>";
-                $i++;
+                $lit[$i++] = $row['nombre'];
               }
 
               // Obtengo la lista de los temas desde la BD
